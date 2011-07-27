@@ -19,14 +19,14 @@ describe PagesController do
   describe "GET 'contact'" do
     it "should be successful" do
       get 'contact'
-      response.should be_success
+      response.should have_selector('title', :content => 'MP | Contact')
     end
   end
 
   describe "GET 'about'" do
     it "should be successful" do
       get 'about'
-      response.should be_success
+      response.should have_selector('title', :content => 'MP | About')
     end
   end
 end
