@@ -1,7 +1,5 @@
 Mp::Application.routes.draw do
 
-  get "users/new"
-
   root :to => 'pages#home'
   
   match '/about',   :to => 'pages#about'
@@ -9,6 +7,8 @@ Mp::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   
   match '/signup',  :to => 'users#new'
+  
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
